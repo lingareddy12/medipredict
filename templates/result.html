@@ -1,0 +1,32 @@
+
+{% extends 'home.html' %}
+
+{% block styling %}
+    
+    body {
+        background-image: url('static/b1.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    } 
+    #result{
+        margin-top:100px;
+        background-color:white;
+    }
+    {% endblock %}
+
+    {% block content %}
+    <div class="pink text-secondary px-4 py-5 text-center" id="result">
+        <div class="py-5">
+          <h1 class="display-5 fw-bold text-pink">{{result}} of {{disease}}</h1>
+          <h4>{{val}}</h4>
+          <div class="col-lg-6 mx-auto">
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <a href="{{url}}">
+                    <button type="button" class="btn btn-success" style="margin-left:250px">Learn more</button>
+                    <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
+                  </a>
+            </div>
+          </div>
+        </div>
+      </div>
+{% endblock %} 

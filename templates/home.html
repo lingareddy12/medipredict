@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Home
+{% endblock %}
+{% block styling %}
+body {
+  background-image: url('static/b1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+} 
+{% endblock %}
+    {% block content %}
+      
+
+
+
+    <div class="bg-dark text-secondary px-4 py-5 text-center">
+        <div class="py-3">
+          <h1 class="display-5 fw-bold text-white">Welcome to MediPredict</h1>
+          <div class="col-lg-6 mx-auto">
+            <p class="fs-5 mb-4">Predict the probability of your Health conditions</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center"> 
+                <a href="{{url_for('diseases')}}">
+              <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold" fdprocessedid="9p5qtk">Predict</button>
+                </a>
+            </div>
+          </div>
+        </div>
+      </div> 
+
+
+<div>   
+
+      <div class="container px-4 py-5" id="featured-3">
+        <h2 class="pb-2 border-bottom">Health Conditions</h2>
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+          <div class="feature col">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+              <svg class="bi" width="1em" height="1em"><use xlink:href="#collection"></use></svg>
+            </div>
+            <h3 class="fs-2 text-body-emphasis">Diabetes</h3>
+            <p>Diabetes is a chronic metabolic disorder characterized by high blood glucose levels (hyperglycemia)
+              due to either inadequate insulin production or ineffective insulin utilization by the body.
+              According to the International Diabetes Federation (IDF), as of 2021, an estimated 463 million adults
+               (aged 20-79 years) were living with diabetes worldwide. </p>
+            <a href="https://www.mayoclinic.org/diseases-conditions/diabetes/symptoms-causes/syc-20371444">
+                <button type="button" class="btn btn-outline-primary">view more</button>
+              <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
+            </a>
+          </div>
+          <div class="feature col">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+              <svg class="bi" width="1em" height="1em"><use xlink:href="#people-circle"></use></svg>
+            </div>
+            <h3 class="fs-2 text-body-emphasis">Breast Cancer</h3>
+            <p>Breast cancer is a type of cancer that develops in the cells of the breast.
+                 It occurs when abnormal cells in the breast grow and divide uncontrollably, forming a tumor.
+                 Breast cancer can affect both men and women, although it is much more common in women.
+                 According to the WHO, in 2020, there were an estimated 2.3 million new cases of breast cancer globally.</p>
+            <a href="https://www.mayoclinic.org/diseases-conditions/breast-cancer/symptoms-causes/syc-20352470" >
+              <button type="button" class="btn btn-outline-primary">view more</button>
+              <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
+            </a>
+          </div>
+          <div class="feature col">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+              <svg class="bi" width="1em" height="1em"><use xlink:href="https://icons.getbootstrap.com/icons/activity/"></use></svg>
+            </div>
+            <h3 class="fs-2 text-body-emphasis">CardioVascular Diseases</h3>
+            <p>
+              Cardiovascular diseases (CVDs) refer to a group of disorders that affect the heart and blood vessels.
+               They include conditions such as coronary artery disease, heart attacks, heart failure, stroke, and peripheral artery diseases.
+               CVDs are the leading cause of death globally. According to the WHO,
+                approximately 18 million deaths were attributed to CVDs in 2019.
+                </p>
+            <a href="https://www.mayoclinic.org/diseases-conditions/heart-attack/symptoms-causes/syc-20373106" >
+                <button type="button" class="btn btn-outline-primary">view more</button>
+              <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    
+
+
+
+      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" style="padding-left: 150px; padding-right: 150px;padding-bottom: 40px;">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="static\diabet.jpg" class="d-block w-100" alt="..." style="width: 300px; height: 600px;">
+          </div>
+          <div class="carousel-item">
+            <img src="static\breast.jpg" class="d-block w-100" alt="..." style="width: 300px; height: 600px;">
+          </div>
+          <div class="carousel-item">
+            <img src="static\heart.png" class="d-block w-100" alt="..." style="width: 300px; height: 600px;">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+
+</div>
+
+
+    {% endblock %}
+

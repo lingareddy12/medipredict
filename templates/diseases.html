@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block styling %}
+
+{% endblock %}
+{%block content%}
+
+  <div class="container my-5" style="margin-bottom:100px;background-color:#F7FFE5" >
+    <div class="row p-4 pb-0 pe-lg-0 pt-lg-5-reverse align-items-center rounded-3 border shadow-lg">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="static/cardio.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="500" height="300" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Cardiovascular Disease Prediction</h1>
+        <p class="lead">Built a Multilayered Artificial Neural Network model to predict the probability
+          of Anemia by considering the Haemoglobin levels,MCH,MCHC & MCV values.
+          Model is trained with 8000+ reports of healthy and anemia patients.
+           The model predicts the outcome with a precision of 92.47%.</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <a href="{{url_for('heart_pred')}}">
+            <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold" fdprocessedid="f8vld1">Predict</button> 
+            </a> 
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container my-5 " style="background-color:#99DBF5" >
+    <div class="row p-4 pb-0 pe-lg-0 pt-lg-5-reverse align-items-center rounded-3 border shadow-lg">
+      <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+        <h1 class="display-4 fw-bold lh-1 text-body-emphasis">Diabetes Prediction</h1>
+        <p class="lead">Built a Multilayered Artificial Neural Network model to predict the probability
+             of Anemia by considering the Haemoglobin levels,MCH,MCHC & MCV values.
+             Model is trained with 8000+ reports of healthy and anemia patients.
+              The model predicts the outcome with a precision of 92.47%.</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">  
+          <a href="{{url_for('diabetes_pred')}}">
+          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold" fdprocessedid="f8vld1">Predict</button> 
+          </a> 
+        </div>
+      </div>
+      <div class="col-lg-4 offset-lg-0 p-0 overflow-hidden shadow-lg">
+          <img class="rounded-lg-2" src="static/diabetes1.jpg" alt="" width="500">
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-5" style="margin-bottom:100px;background-color: #FFD0D0" >
+    <div class="row p-4 pb-0 pe-lg-0 pt-lg-5-reverse align-items-center rounded-3 border shadow-lg">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="static/breast1.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="500" height="300" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Breast Cancer Classification</h1>
+        <p class="lead">Built a Multilayered Artificial Neural Network model to predict the probability
+          of Anemia by considering the Haemoglobin levels,MCH,MCHC & MCV values.
+          Model is trained with 8000+ reports of healthy and anemia patients.
+           The model predicts the outcome with a precision of 92.47%.</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <a href="{{url_for('breastcancer_pred')}}">
+            <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold" fdprocessedid="f8vld1">Predict</button> 
+            </a> 
+        </div>
+      </div>
+    </div>
+  </div> 
+
+
+ 
+
+{% endblock %}

@@ -1,0 +1,94 @@
+
+{% extends 'home.html' %}
+
+{% block styling %}
+    
+    body {
+        background-image: url('static/formback.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    } 
+    
+    #form {
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        margin-color:black;
+        border: 10px solid black;
+        padding-top: 50px; 
+        padding-left:50px;
+        width: 600px;
+        height: 1000px;
+    }
+    {% endblock %}
+
+    {% block content %}
+
+    <div class="container" id="form">
+        <form method="POST" action="{{ url_for('diabetes_pred') }}">
+            {{ form.csrf_token }}
+            <div>
+                
+                <div>
+                    <h3>{{ form.age.label }}</h3>
+                    {{ form.age(placeholder="age in years") }}
+                    {{ form.age.errors }}
+
+                </div>
+           <br>
+                <div>
+                    <h3>{{ form.preg.label }}</h3>
+                    {{ form.preg(placeholder="0 for male") }}
+                    {{ form.preg.errors }}
+
+                </div> 
+                <br>
+                <div>
+                    <h3>{{ form.gluc.label }}</h3>
+                    {{ form.gluc(placeholder="mg per dl") }}
+                    {{ form.gluc.errors }}
+
+                    
+                </div>
+                <br>
+                <div>
+                    <h3>{{ form.bp.label }}</h3>
+                    {{ form.bp(placeholder="mm of Hg") }}
+                    {{ form.bp.errors }}
+
+                 
+                </div> 
+                <br>
+                <div>
+                    <h3>{{ form.skin.label }}</h3>
+                    {{ form.skin(placeholder="micrometers") }}
+                    {{ form.skin.errors }}
+                 
+                </div> 
+            <br>
+            <div>
+                <h3>{{ form.ins.label }}</h3>
+                {{ form.ins(placeholder="microunits per millileter") }}
+                {{ form.ins.errors }}
+            </div> 
+            <br>
+            <div>
+                <h3>{{ form.bmi.label }}</h3>
+                {{ form.bmi() }}
+                {{ form.bmi.errors }}
+            </div> 
+            <br>
+            <div>   
+                <abbr title="DPF = Σ(0.1 * no.of affected relatives)"><h3>{{ form.dpf.label }}</h3></abbr>
+                {{ form.dpf() }}
+                {{ form.dpf.errors }}
+            </div> 
+            <br>
+                <div> 
+                    {{ form.submit() }}
+                </div>
+            </div> 
+        </form>
+    </div> 
+{% endblock %}
