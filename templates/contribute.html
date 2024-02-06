@@ -27,31 +27,21 @@
        
         <form method="POST" action="{{ url_for('signup') }}"> 
             <br>
-            <h1 style="margin-left:50px;">MediPredict</h1>
+            <h1 style="margin-left:80px;">MediPredict</h1>
             {{ form.csrf_token }}
             <div>
                 <br> 
                 <div>
-                    <h3>{{ form.name.label }}</h3>
-                    {{ form.name() }}
+                    <h3>{{ form.username.label }}</h3>
+                    {{ form.username(placeholder="username") }}
                 </div>
-
-                <br>
-
+                <br> 
                 <div>
-                      <h3>{{ form.dis.label }}</h3>
-                       {{ form.dis() }} 
+                    <h3>{{ form.email.label }}</h3>
+                    {{ form.email(placeholder="email") }}
+                    {{ form.email.errors }}
                 </div>
-
                 <br>
-
-                <div>
-                <h3>{{ form.review.label }}</h3>
-                {{ form.review() }} 
-                </div>
-
-                 <br>
-
                 <div> 
                     {{ form.submit() }}
                 </div>

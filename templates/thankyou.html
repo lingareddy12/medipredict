@@ -1,0 +1,25 @@
+
+{% extends 'home.html' %}
+{% block title %}Feedback{% endblock %}
+{% block styling %}
+    
+    body {
+        background-image: url('static/b1.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    } 
+    #result{
+        margin-top:100px;
+        background-color:white;
+    }
+    {% endblock %}
+
+    {% block content %}
+    <div class="pink text-secondary px-4 py-5 text-center" id="result">
+        <div class="py-5">
+          <h1 class="display-5 fw-bold text-pink">Thank You for Your Feedback</h1>
+          <h4>Your inputs are saved to our Database.We will improve our model with your feedback</h4>
+          </div>
+        </div>
+      </div>
+{% endblock %} 

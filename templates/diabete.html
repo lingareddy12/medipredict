@@ -19,7 +19,7 @@
         padding-top: 50px; 
         padding-left:50px;
         width: 600px;
-        height: 1000px;
+        height: 900px;
     }
     {% endblock %}
 
@@ -47,27 +47,19 @@
                 <div>
                     <h3>{{ form.gluc.label }}</h3>
                     {{ form.gluc(placeholder="mg per dl") }}
-                    {{ form.gluc.errors }}
-
-                    
+                    {{ form.gluc.errors }}   
                 </div>
+
                 <br>
+
                 <div>
                     <h3>{{ form.bp.label }}</h3>
                     {{ form.bp(placeholder="mm of Hg") }}
                     {{ form.bp.errors }}
-
                  
                 </div> 
                 <br>
                 <div>
-                    <h3>{{ form.skin.label }}</h3>
-                    {{ form.skin(placeholder="micrometers") }}
-                    {{ form.skin.errors }}
-                 
-                </div> 
-            <br>
-            <div>
                 <h3>{{ form.ins.label }}</h3>
                 {{ form.ins(placeholder="microunits per millileter") }}
                 {{ form.ins.errors }}

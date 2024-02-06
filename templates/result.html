@@ -1,6 +1,6 @@
 
 {% extends 'home.html' %}
-
+{% block title %}Result{% endblock %}
 {% block styling %}
     
     body {
@@ -25,7 +25,10 @@
                     <button type="button" class="btn btn-success" style="margin-left:250px">Learn more</button>
                     <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
                   </a>
-            </div>
+            </div>  
+            <a href={{url_for('signup')}}> 
+          <h4> Help us to Improve </h4> </a>
+            
           </div>
         </div>
       </div>
